@@ -8,3 +8,7 @@ spring:
     port: 5672
     username: admin
     password: admin
+    listener:
+      simple:
+        #限流，每次消费端ack应答前，只允许拉一条消息
+        prefetch: 1

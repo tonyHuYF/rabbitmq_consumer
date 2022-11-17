@@ -28,6 +28,7 @@ public class MessageConfig {
         container.addQueues(new Queue("testDirectQueue", true));
         container.addQueues(new Queue("topic.man", true));
         container.addQueues(new Queue("topic.woman", true));
+        container.addQueues(new Queue("test_dlx.message", true));
 
         //设置消息处理类
         container.setMessageListener(myAckReceiver);
