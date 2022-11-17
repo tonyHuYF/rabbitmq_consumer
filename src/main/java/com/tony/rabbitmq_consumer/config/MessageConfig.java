@@ -30,6 +30,9 @@ public class MessageConfig {
         container.addQueues(new Queue("topic.woman", true));
         container.addQueues(new Queue("test_dlx.message", true));
 
+        //接收死信队列消息，以实现延迟队列实现
+        container.addQueues(new Queue("delay_dlx", true));
+
         //设置消息处理类
         container.setMessageListener(myAckReceiver);
 
